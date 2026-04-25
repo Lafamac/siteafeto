@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf9; /* Off-white / Stone 50 */
-  --foreground: #1c1917; /* Dark text / Stone 900 */
+  --background: #2d5a7d;
+  --foreground: #ffffff;
   
-  --color-afeto-purple: #8b5cf6;
-  --color-afeto-blue: #3b82f6;
-  --color-afeto-green: #10b981;
-  --color-afeto-red: #ef4444;
-  --color-afeto-orange: #f97316;
+  --color-afeto-purple: #6b7280;
+  --color-afeto-blue: #4b5563;
+  --color-afeto-green: #059669;
+  --color-afeto-red: #dc2626;
+  --color-afeto-orange: #d97706;
 }
 
 @theme inline {
