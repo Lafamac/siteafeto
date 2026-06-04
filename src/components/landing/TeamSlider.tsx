@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    name: "Equipe Afeto",
+    name: "Equipe Afeto (Cláudia)",
     role: "Psicopedagoga",
     crea: "CPp XXXXX",
-    desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica."
+    desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
+    image: "/img/claudia.png"
   },
   {
     name: "Equipe Afeto (Thaty)",
