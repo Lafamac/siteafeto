@@ -5,11 +5,10 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    name: "Equipe Afeto (Cláudia)",
+    name: "Equipe Afeto",
     role: "Psicopedagoga",
     crea: "CPp XXXXX",
-    desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
-    image: "/img/claudia.png"
+    desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica."
   },
   {
     name: "Equipe Afeto (Thaty)",
@@ -48,7 +47,7 @@ const TeamSlider = () => {
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-brand-purple/20">
