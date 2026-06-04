@@ -37,7 +37,7 @@ export default function Header() {
   const navLinks = [
     { name: "Início", href: "/" },
     { name: "Reforço", href: "/#reforco-detalhe" },
-    { name: "Clínica", href: "/#neuro-detalhe" },
+    { name: "Psicopedagogia", href: "/#psicopedagogia-detalhe" },
     { name: "O Espaço", href: "/#espaco" },
   ];
 

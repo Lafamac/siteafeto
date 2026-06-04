@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="text-xl font-serif font-bold text-brand-purple tracking-tight">Afeto</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Transformando histórias através do aprendizado e do cuidado psicológico especializado. Há mais de 10 anos sendo referência em Lavras/MG.
+              Transformando histórias através do aprendizado e do suporte psicopedagógico especializado. Há mais de 10 anos sendo referência em Lavras/MG.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-brand-soft flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition-all">
@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link href="/" className="text-gray-500 hover:text-brand-purple transition-colors text-sm font-medium">Início</Link></li>
               <li><Link href="/#reforco-detalhe" className="text-gray-500 hover:text-brand-purple transition-colors text-sm font-medium">Reforço Escolar</Link></li>
-              <li><Link href="/#neuro-detalhe" className="text-gray-500 hover:text-brand-purple transition-colors text-sm font-medium">Atendimento Neuro</Link></li>
+              <li><Link href="/#psicopedagogia-detalhe" className="text-gray-500 hover:text-brand-purple transition-colors text-sm font-medium">Psicopedagogia</Link></li>
               <li><Link href="/#espaco" className="text-gray-500 hover:text-brand-purple transition-colors text-sm font-medium">O Nosso Espaço</Link></li>
             </ul>
           </div>
@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-500 font-medium">
                 <Phone size={18} className="text-brand-warm" />
-                Clínica: (35) 99169-6527
+                Psicopedagogia: (35) 99169-6527
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-500 font-medium">
                 <Mail size={18} className="text-brand-warm" />

@@ -6,10 +6,14 @@ import { MapPin } from "lucide-react";
 
 const SpaceGallery = () => {
   const images = [
-    { src: "/img/fachada.jpg", label: "Fachada" },
-    { src: "/img/salas.jpg", label: "Salas de Aula" },
-    { src: "/img/consultorio.jpg", label: "Consultório" },
-    { src: "/img/ludico.jpg", label: "Espaço Lúdico" },
+    { src: "/img/imagem7.jpg", label: "Fachada do Núcleo" },
+    { src: "/img/imagem3.jpg", label: "Espaço Lúdico" },
+    { src: "/img/imagem5.jpg", label: "Sala de Aula" },
+    { src: "/img/imagem8.jpg", label: "Consultório de Atendimento" },
+    { src: "/img/imagem1.jpg", label: "Atividades & Jogos" },
+    { src: "/img/imagem2.jpg", label: "Recursos Didáticos" },
+    { src: "/img/imagem4.jpg", label: "Integração e Afeto" },
+    { src: "/img/imagem6.jpg", label: "Cantinho da Leitura" },
   ];
 
   return (
@@ -25,23 +29,25 @@ const SpaceGallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
           {images.map((img, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gray-100"
+              transition={{ delay: idx * 0.05 }}
+              className="group relative aspect-[4/3] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gray-100 hover:shadow-2xl transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-brand-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-              <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-white font-bold">
-                {img.label}
-              </div>
-              {/* Placeholder visualization */}
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                <span className="text-sm font-medium">Foto: {img.label}</span>
+              <img 
+                src={img.src} 
+                alt={img.label} 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-brand-purple/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+              <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-white">
+                <span className="text-[10px] uppercase tracking-widest text-brand-accent font-bold block mb-1">Nosso Espaço</span>
+                <h4 className="font-bold text-base leading-tight font-serif">{img.label}</h4>
               </div>
             </motion.div>
           ))}

@@ -5,22 +5,16 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    name: "Dra. Valéria",
-    role: "Neuropsicóloga (PhD)",
-    crea: "CRP 04/XXXXX",
-    desc: "Doutora em Comportamento Humano, especialista em avaliações neuropsicológicas e intervenção clínica.",
-  },
-  {
     name: "Equipe Afeto",
     role: "Psicopedagoga",
     crea: "CPp XXXXX",
-    desc: "Especialista em Educação Infantil e Ensino Fundamental, focada em reforço escolar lúdico.",
+    desc: "Especialistas em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
   },
   {
     name: "Equipe Afeto",
-    role: "Psicóloga Clínica",
-    crea: "CRP 04/XXXXX",
-    desc: "Acolhimento de crianças, jovens e adultos com foco em saúde emocional e bem-estar.",
+    role: "Apoio Pedagógico",
+    crea: "Licenciadas em Pedagogia",
+    desc: "Equipe focada em rotina de estudos, organização escolar e apoio diário no reforço escolar.",
   },
 ];
 
@@ -33,11 +27,11 @@ const TeamSlider = () => {
             Nossa Equipe
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Profissionais apaixonadas pelo que fazem, em constante atualização para oferecer o melhor cuidado técnico e humano.
+            Profissionais apaixonadas pelo que fazem, em constante atualização para oferecer o melhor cuidado técnico e pedagógico.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {team.map((member, idx) => (
             <motion.div
               key={idx}

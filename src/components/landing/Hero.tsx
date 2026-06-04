@@ -47,7 +47,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-white/95 max-w-2xl mb-12 leading-relaxed font-sans"
           >
             Há mais de <span className="font-bold text-white underline decoration-brand-warm underline-offset-4">10 anos</span>, o Núcleo Afeto transforma histórias. 
-            Oferecemos reforço escolar e atendimento neuropsicológico em um espaço lúdico e repleto de afeto.
+            Oferecemos reforço escolar e atendimento psicopedagógico em um espaço lúdico e repleto de afeto.
           </motion.p>
 
           {/* CTA Button */}

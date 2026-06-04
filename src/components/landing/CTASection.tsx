@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { MessageCircle, GraduationCap, Brain } from "lucide-react";
 
 const CTASection = () => {
-  const whatsappReforco = "https://wa.me/5535991957579?text=Vi%20o%20site%20e%20desejo%20refor%C3%A7o%20escolar";
-  const whatsappNeuro = "https://wa.me/5535991696527?text=Vi%20o%20site%20e%20desejo%20atendimento%20psicol%C3%B3gico";
+  const whatsappReforco = "https://wa.me/5535991957579?text=Olá,%20vi%20o%20site%20e%20desejo%20saber%20mais%20sobre%20o%20reforço%20escolar";
+  const whatsappPsicopedagogia = "https://wa.me/5535991696527?text=Olá,%20vi%20o%20site%20e%20desejo%20agendar%20uma%20avaliação%20psicopedagógica";
 
   return (
     <section id="contato" className="py-24 bg-brand-purple relative overflow-hidden">
@@ -25,7 +25,7 @@ const CTASection = () => {
             Não espere a dificuldade virar uma bola de neve.
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto font-sans leading-relaxed">
-            Lidar com a frustração escolar do seu filho ou com o peso das próprias emoções não precisa ser uma caminhada solitária. No Núcleo Afeto, cada dificuldade é tratada com respeito, ciência e, acima de tudo, carinho.
+            Lidar com a frustração escolar do seu filho, atrasos de alfabetização ou dificuldades na leitura e escrita não precisa ser uma caminhada solitária. No Núcleo Afeto, cada dificuldade é tratada com respeito, afeto e suporte especializado.
             <br /><br />
             <span className="font-bold">Dê o primeiro passo para uma rotina com mais paz, autonomia e leveza. Fale com a nossa equipe sem compromisso e sinta-se em casa:</span>
           </p>
@@ -45,7 +45,7 @@ const CTASection = () => {
             </motion.a>
 
             <motion.a
-              href={whatsappNeuro}
+              href={whatsappPsicopedagogia}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -53,7 +53,7 @@ const CTASection = () => {
               className="flex items-center justify-center gap-3 px-8 py-5 bg-brand-green text-white rounded-2xl font-bold text-lg shadow-2xl shadow-black/20 hover:bg-brand-green-dark transition-all"
             >
               <Brain size={24} />
-              <span>Falar sobre Atendimento Psicológico</span>
+              <span>Agendar Avaliação Psicopedagógica</span>
               <MessageCircle size={22} className="ml-2" />
             </motion.a>
           </div>

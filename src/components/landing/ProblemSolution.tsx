@@ -11,7 +11,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const ProblemSolution = () => {
-  const [activeTab, setActiveTab] = useState<"reforco" | "neuro">("reforco");
+  const [activeTab, setActiveTab] = useState<"reforco" | "psicopedagogia">("reforco");
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -46,16 +46,16 @@ const ProblemSolution = () => {
               Reforço Escolar
             </button>
             <button
-              onClick={() => setActiveTab("neuro")}
+              onClick={() => setActiveTab("psicopedagogia")}
               className={cn(
                 "flex items-center gap-2 px-8 py-4 rounded-full font-bold transition-all duration-300 text-base md:text-lg",
-                activeTab === "neuro"
+                activeTab === "psicopedagogia"
                   ? "bg-brand-purple text-white shadow-xl shadow-brand-purple/30"
                   : "bg-brand-soft text-brand-purple hover:bg-brand-accent transition-colors border border-brand-purple/10"
               )}
             >
               <Brain size={22} />
-              Atendimento Neuropsicológico
+              Atendimento Psicopedagógico
             </button>
           </div>
         </div>
@@ -93,7 +93,7 @@ const ProblemSolution = () => {
               </motion.div>
             ) : (
               <motion.div
-                key="neuro"
+                key="psicopedagogia"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -105,16 +105,16 @@ const ProblemSolution = () => {
                     <Brain size={32} />
                   </div>
                   <p className="text-lg md:text-xl text-gray-800 mb-6 leading-relaxed">
-                    Lidar com a ansiedade, suspeitas de neurodivergências ou a exaustão emocional não precisa ser uma jornada solitária e pesada.
+                    Seu filho apresenta dificuldades na leitura, escrita, alfabetização, atenção ou organização dos estudos?
                   </p>
                   <p className="text-lg md:text-xl text-gray-900 font-bold mb-8 leading-relaxed italic">
-                    Podemos ajudar — Oferecemos um espaço seguro e sem julgamentos para terapia psicológica e avaliações neuropsicológicas precisas (TDAH, Autismo, etc.), conduzindo tudo com o acolhimento e profissionalismo de uma Neuropsicóloga doutora em comportamento.
+                    Podemos ajudar — A psicopedagogia ajuda a identificar as causas dessas dificuldades e a desenvolver estratégias que favorecem a aprendizagem de forma eficaz e acolhedora.
                   </p>
                   <button
-                    onClick={() => scrollToSection("neuro-detalhe")}
+                    onClick={() => scrollToSection("psicopedagogia-detalhe")}
                     className="flex items-center gap-2 px-8 py-4 bg-brand-green text-white rounded-full font-bold hover:scale-105 transition-all shadow-lg shadow-brand-green/20"
                   >
-                    <span>Saber mais sobre o atendimento psicológico</span>
+                    <span>Saber mais sobre o atendimento psicopedagógico</span>
                     <ArrowRight size={20} />
                   </button>
                 </div>
