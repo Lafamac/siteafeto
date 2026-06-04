@@ -9,14 +9,16 @@ const team = [
     role: "Psicopedagoga",
     crea: "CPp XXXXX",
     desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
-    image: "/img/claudia.png"
+    image: "/img/claudia.png",
+    positionClass: "object-top"
   },
   {
     name: "Equipe Afeto (Thaty)",
     role: "Apoio Pedagógico",
     crea: "Licenciadas em Pedagogia",
     desc: "Equipe focada em rotina de estudos, organização escolar e apoio diário no reforço escolar.",
-    image: "/img/thaty.png"
+    image: "/img/thaty.jpeg",
+    positionClass: "object-center"
   },
 ];
 
@@ -48,7 +50,7 @@ const TeamSlider = () => {
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover object-top"
+                    className={`w-full h-full object-cover ${member.positionClass}`}
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-brand-purple/20">

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle, AlertCircle, Award, BookOpen, Clock, Heart, Users } from "lucide-react";
 
 const PsicopedagogiaSection = () => {
-  const whatsappUrl = "https://wa.me/5535991696527?text=Olá,%20vi%20o%20site%20e%20desejo%20agendar%20uma%20avaliação%20psicopedagógica";
+  const whatsappUrl = "https://wa.me/5535991957579?text=Olá,%20vi%20o%20site%20e%20desejo%20agendar%20uma%20avaliação%20psicopedagógica";
 
   const indications = [
     { text: "Crianças com dificuldades de aprendizagem", icon: AlertCircle },

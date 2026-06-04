@@ -56,11 +56,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-sm text-gray-500 font-medium">
                 <Phone size={18} className="text-brand-warm" />
-                Reforço: (35) 99195-7579
-              </li>
-              <li className="flex items-center gap-3 text-sm text-gray-500 font-medium">
-                <Phone size={18} className="text-brand-warm" />
-                Psicopedagogia: (35) 99169-6527
+                Psicopedagogia: (35) 99195-7579
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-500 font-medium">
                 <Mail size={18} className="text-brand-warm" />

@@ -6,7 +6,7 @@ import { MessageCircle, GraduationCap, Brain } from "lucide-react";
 
 const CTASection = () => {
   const whatsappReforco = "https://wa.me/5535991957579?text=Olá,%20vi%20o%20site%20e%20desejo%20saber%20mais%20sobre%20o%20reforço%20escolar";
-  const whatsappPsicopedagogia = "https://wa.me/5535991696527?text=Olá,%20vi%20o%20site%20e%20desejo%20agendar%20uma%20avaliação%20psicopedagógica";
+  const whatsappPsicopedagogia = "https://wa.me/5535991957579?text=Olá,%20vi%20o%20site%20e%20desejo%20agendar%20uma%20avaliação%20psicopedagógica";
 
   return (
     <section id="contato" className="py-24 bg-brand-purple relative overflow-hidden">
