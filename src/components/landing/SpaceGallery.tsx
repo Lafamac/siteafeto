@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 
 const SpaceGallery = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
   const images = [
     { src: "/img/imagem7.jpg", label: "Fachada do Núcleo" },
     { src: "/img/imagem3.jpg", label: "Espaço Lúdico" },
@@ -15,6 +16,17 @@ const SpaceGallery = () => {
     { src: "/img/imagem4.jpg", label: "Integração e Afeto" },
     { src: "/img/imagem6.jpg", label: "Cantinho da Leitura" },
   ];
+
+  const scroll = (direction: "left" | "right") => {
+    if (sliderRef.current) {
+      const { scrollLeft, clientWidth } = sliderRef.current;
+      const scrollAmount = clientWidth * 0.75;
+      sliderRef.current.scrollTo({
+        left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <section id="espaco" className="py-24 bg-white">
@@ -28,29 +40,52 @@ const SpaceGallery = () => {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-          {images.map((img, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.05 }}
-              className="group relative aspect-[4/3] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gray-100 hover:shadow-2xl transition-all duration-500"
-            >
-              <img 
-                src={img.src} 
-                alt={img.label} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-brand-purple/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-              <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-white">
-                <span className="text-[10px] uppercase tracking-widest text-brand-accent font-bold block mb-1">Nosso Espaço</span>
-                <h4 className="font-bold text-base leading-tight font-serif">{img.label}</h4>
-              </div>
-            </motion.div>
-          ))}
+        {/* Gallery Slider Container */}
+        <div className="relative mb-16 group">
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 hover:bg-white text-brand-purple flex items-center justify-center shadow-lg hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 hover:bg-white text-brand-purple flex items-center justify-center shadow-lg hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            aria-label="Próximo"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Slider Row */}
+          <div
+            ref={sliderRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 scrollbar-hide"
+          >
+            {images.map((img, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+                className="flex-shrink-0 w-[290px] sm:w-[350px] snap-start group/card relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gray-100 hover:shadow-2xl transition-all duration-500"
+              >
+                <img 
+                  src={img.src} 
+                  alt={img.label} 
+                  className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-brand-purple/30 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 z-10" />
+                <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0 text-white">
+                  <span className="text-[10px] uppercase tracking-widest text-brand-accent font-bold block mb-1">Nosso Espaço</span>
+                  <h4 className="font-bold text-base leading-tight font-serif">{img.label}</h4>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Map Section */}

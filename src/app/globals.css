@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FDFCFB;
+  --background: #FCF8F5; /* Cor suave e acolhedora da identidade visual da empresa (brand-soft) */
   --foreground: #111827;
   
   --brand-purple: #855e99;
@@ -38,3 +38,13 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-fraunces), serif;
 }
+
+/* Utilitário para ocultar barra de rolagem horizontal mantendo a funcionalidade de scroll */
+.scrollbar-hide {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+

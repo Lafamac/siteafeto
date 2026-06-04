@@ -153,7 +153,6 @@ const PsicopedagogiaSection = () => {
             </div>
           </div>
           <div className="md:col-span-7 space-y-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-warm">Profissional Responsável</span>
             <h3 className="text-3xl font-serif text-brand-purple">Equipe Afeto</h3>
             <p className="text-gray-600 leading-relaxed">
               No Núcleo Afeto, o atendimento psicopedagógico é conduzido por especialistas com pós-graduação e sólida experiência em psicopedagogia clínica e institucional. 
