@@ -142,14 +142,12 @@ const PsicopedagogiaSection = () => {
         {/* About the professional */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24">
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-brand-purple/10 shadow-2xl bg-brand-soft">
-              {/* Profile placeholder with nice styles */}
-              <div className="absolute inset-0 flex items-center justify-center text-brand-purple/20">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-32 h-32">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08s5.97 1.09 6 3.08c-1.29 1.94-3.5 3.22-6 3.22z"/>
-                </svg>
-              </div>
-              <div className="absolute inset-0 bg-brand-purple/10" />
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-brand-purple/10 shadow-2xl bg-white">
+              <img 
+                src="/img/claudia.png" 
+                alt="Cláudia - Psicopedagoga" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="md:col-span-7 space-y-6">

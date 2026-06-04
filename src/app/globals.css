@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FCF8F5; /* Cor suave e acolhedora da identidade visual da empresa (brand-soft) */
+  --background: #F4EAE1; /* Cor creme/avelã mais aconchegante da marca, ligeiramente mais escura */
   --foreground: #111827;
   
   --brand-purple: #855e99;

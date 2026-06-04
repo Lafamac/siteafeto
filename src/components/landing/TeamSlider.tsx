@@ -5,16 +5,18 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    name: "Equipe Afeto",
+    name: "Equipe Afeto (Cláudia)",
     role: "Psicopedagoga",
     crea: "CPp XXXXX",
-    desc: "Especialistas em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
+    desc: "Especialista em desenvolvimento cognitivo, dificuldades de aprendizagem e processos de alfabetização lúdica.",
+    image: "/img/claudia.png"
   },
   {
-    name: "Equipe Afeto",
+    name: "Equipe Afeto (Thaty)",
     role: "Apoio Pedagógico",
     crea: "Licenciadas em Pedagogia",
     desc: "Equipe focada em rotina de estudos, organização escolar e apoio diário no reforço escolar.",
+    image: "/img/thaty.png"
   },
 ];
 
@@ -41,13 +43,20 @@ const TeamSlider = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-white p-8 rounded-3xl shadow-lg border border-brand-purple/5 flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
             >
-              <div className="w-32 h-32 rounded-full bg-brand-soft border-4 border-brand-purple/10 mb-6 overflow-hidden relative">
-                {/* Profile placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-brand-purple/20">
-                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16">
-                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08s5.97 1.09 6 3.08c-1.29 1.94-3.5 3.22-6 3.22z"/>
-                   </svg>
-                </div>
+              <div className="w-32 h-32 rounded-full bg-white border-4 border-brand-purple/10 mb-6 overflow-hidden relative">
+                {member.image ? (
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-brand-purple/20">
+                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16">
+                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08s5.97 1.09 6 3.08c-1.29 1.94-3.5 3.22-6 3.22z"/>
+                     </svg>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-brand-purple/10 group-hover:bg-transparent transition-colors" />
               </div>
               

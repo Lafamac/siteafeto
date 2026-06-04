@@ -20,6 +20,7 @@ interface ServiceSectionProps {
   ctaLink: string;
   reverse?: boolean;
   variant: "warm" | "purple";
+  imageUrl?: string;
 }
 
 const ServiceSection: React.FC<ServiceSectionProps> = ({
@@ -32,6 +33,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
   ctaLink,
   reverse = false,
   variant,
+  imageUrl,
 }) => {
   const isWarm = variant === "warm";
 
@@ -49,18 +51,27 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className={cn(
-                "aspect-[4/3] rounded-2xl relative z-10 overflow-hidden shadow-2xl",
-                isWarm ? "bg-brand-warm-light/20" : "bg-brand-purple-light/20"
+                "aspect-[4/3] rounded-2xl relative z-10 overflow-hidden shadow-2xl bg-white"
               )}
             >
-              <div className={cn(
-                "absolute inset-0 opacity-40 mix-blend-multiply",
-                isWarm ? "bg-brand-warm" : "bg-brand-purple"
-              )} />
-              {/* Placeholder pattern */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full border-4 border-white/30 animate-ping" />
-              </div>
+              {imageUrl ? (
+                <img 
+                  src={imageUrl} 
+                  alt={title} 
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <>
+                  <div className={cn(
+                    "absolute inset-0 opacity-40 mix-blend-multiply",
+                    isWarm ? "bg-brand-warm" : "bg-brand-purple"
+                  )} />
+                  {/* Placeholder pattern */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-24 h-24 rounded-full border-4 border-white/30 animate-ping" />
+                  </div>
+                </>
+              )}
             </motion.div>
             
             {/* Decorative background shape */}

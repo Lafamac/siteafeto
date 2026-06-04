@@ -30,6 +30,7 @@ export default function Home() {
         transformation="A transformação: Seu filho ganha independência escolar e você ganha a paz de saber que ele está sendo cuidado por quem entende."
         ctaText="Eu quero reforço escolar"
         ctaLink="https://wa.me/5535991957579?text=Vi%20o%20site%20e%20desejo%20refor%C3%A7o%20escolar"
+        imageUrl="/img/reforco.png"
         variant="warm"
       />
 
